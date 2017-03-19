@@ -31,7 +31,7 @@ const (
 
 //GetVersion get version
 func GetVersion() string {
-	return Version
+	return version
 }
 
 func main() {
