@@ -34,7 +34,7 @@ func createDir(cmd *Command, args []string) int {
 	fmt.Println(gopath)
 	githubsrc := gopath[0] + "/github.com/go-ego/e/gen/"
 
-	afile, err := WalkFile(src, "")
+	afile, err := WalkFile(githubsrc, "")
 	if err != nil {
 		fmt.Println(err)
 	}

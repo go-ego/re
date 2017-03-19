@@ -85,7 +85,7 @@ func versionCmd(cmd *Command, args []string) int {
 			runtime.GOROOT(),
 			runtime.Compiler,
 			version,
-			getBeegoVersion(),
+			getEgoVersion(),
 		}
 		switch outputFormat {
 		case "json":
