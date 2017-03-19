@@ -32,12 +32,14 @@ var cmdNew = &Command{
 func createDir(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	fmt.Println(gopath)
-	githubsrc := gopath[0] + "/github.com/go-ego/e/gen/"
+	githubsrc := gopath[0] + "/src/github.com/go-ego/e/gen/"
+	// fmt.Println("githubsrc--------", githubsrc)
 
 	afile, err := WalkFile(githubsrc, "")
 	if err != nil {
 		fmt.Println(err)
 	}
+	// fmt.Println(afile)
 
 	if len(args) != 1 {
 		logger.Fatal("Argument [appname] is missing")
@@ -112,8 +114,8 @@ func Wirtefile(wirtestr string, userFile string) {
 
 func WalkFile(dirPth, suffix string) (files []string, err error) {
 	files = make([]string, 0, 30)
-	suffix = strings.ToUpper(suffix)                                                     //忽略后缀匹配的大小写
-	err = filepath.Walk(dirPth, func(filename string, fi os.FileInfo, err error) error { //遍历目录
+	suffix = strings.ToUpper(suffix)
+	err = filepath.Walk(dirPth, func(filename string, fi os.FileInfo, err error) error {
 
 		if fi.IsDir() { // dir
 			return nil
