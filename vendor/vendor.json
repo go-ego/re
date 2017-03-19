@@ -8,6 +8,12 @@
             "revisionTime": "2016-10-26T20:31:22Z"
         },
         {
+            "checksumSHA1": "G778A9feKkdW7ZjeDdj5qoU0Ku4=",
+            "path": "github.com/gorilla/websocket",
+            "revision": "b258b4fadb573ac412f187b9f31974ea99d32f50",
+            "revisionTime": "2017-03-02T22:46:13Z"
+        },
+        {
             "checksumSHA1": "59kg2xC3rBxV0/5SIv+LA4qva08=",
             "path": "github.com/go-sql-driver/mysql",
             "revision": "6fd058ce0d6b7ee43174e80d5a3e7f483c4dfbe5",
