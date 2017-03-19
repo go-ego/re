@@ -7,12 +7,12 @@
             "revision": "fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197",
             "revisionTime": "2016-10-26T20:31:22Z"
         },
-        {
-            "checksumSHA1": "G778A9feKkdW7ZjeDdj5qoU0Ku4=",
-            "path": "github.com/gorilla/websocket",
-            "revision": "b258b4fadb573ac412f187b9f31974ea99d32f50",
-            "revisionTime": "2017-03-02T22:46:13Z"
-        },
+        // {
+        //     "checksumSHA1": "G778A9feKkdW7ZjeDdj5qoU0Ku4=",
+        //     "path": "github.com/gorilla/websocket",
+        //     "revision": "b258b4fadb573ac412f187b9f31974ea99d32f50",
+        //     "revisionTime": "2017-03-02T22:46:13Z"
+        // },
         {
             "checksumSHA1": "59kg2xC3rBxV0/5SIv+LA4qva08=",
             "path": "github.com/go-sql-driver/mysql",
