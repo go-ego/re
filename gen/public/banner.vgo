@@ -2,8 +2,8 @@ import (
 	"toast"
 	head "head.vgo"
 
-	"icon"
-	icon "icon/icon.vgo"
+	"icons"
+	icon "icons/icon.vgo"
 	)
 
 <div id="banner" class="icon-font">

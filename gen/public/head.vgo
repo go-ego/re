@@ -1,7 +1,7 @@
 
 import (
-	"icon"
-	icon "icon/icon.vgo"
+	"icons"
+	icon "icons/icon.vgo"
 	)
 
 <div class="head" {node}>
