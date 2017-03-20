@@ -39,11 +39,11 @@ func createDir(cmd *Command, args []string) int {
 	}
 	// fmt.Println("githubsrc--------", githubsrc)
 
-	afile, err := WalkFile(githubsrc, "")
+	afilesrc, err := WalkFile(githubsrc, "")
 	if err != nil {
 		fmt.Println(err)
 	}
-	// fmt.Println(afile)
+	// fmt.Println(afilesrc)
 
 	if len(args) != 1 {
 		logger.Fatal("Argument [appname] is missing")
@@ -64,12 +64,13 @@ func createDir(cmd *Command, args []string) int {
 
 	logger.Info("Creating application... " + packpath)
 
-	for i := 0; i < len(afile); i++ {
-
-		tfile := strings.Replace(afile[i], githubsrc, "", -1)
+	for i := 0; i < len(afilesrc); i++ {
+		if runtime.GOOS == "windows" {
+			afilesrc[i] = strings.Replace(afilesrc[i], "/", "\\", -1)
+		}
+		tfile := strings.Replace(afilesrc[i], githubsrc, "", -1)
 		name := apppath + "/" + tfile
-
-		CopyFile(afile[i], name)
+		CopyFile(afilesrc[i], name)
 	}
 
 	return 0
