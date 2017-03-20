@@ -11,7 +11,7 @@ import (
 	<icon>
 		vclass={icon-share-to}
 		node={ id="slot1"}
-		prpo={node---1}
+		prpo={node--- 1}
 	</icon>
 
 	<div>

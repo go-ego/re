@@ -41,7 +41,7 @@ func main() {
 
 	parArr := [5]int{1, 2, 3, 4, 5}
 	router.EgoRouter("/head/", "head/head.html", ego.Map{
-		"head":   "Test to load the HTML template",
+		"head":   " Test to load the HTML template",
 		"parArr": parArr,
 	})
 
