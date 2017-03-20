@@ -67,6 +67,7 @@ func createDir(cmd *Command, args []string) int {
 	for i := 0; i < len(afilesrc); i++ {
 		if runtime.GOOS == "windows" {
 			afilesrc[i] = strings.Replace(afilesrc[i], "/", "\\", -1)
+			apppath = strings.Replace(apppath, "/", "\\", -1)
 		}
 		tfile := strings.Replace(afilesrc[i], githubsrc, "", -1)
 		name := apppath + "/" + tfile
