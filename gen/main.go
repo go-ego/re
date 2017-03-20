@@ -12,7 +12,7 @@ package main
 
 import (
 	// "fmt"
-	"go-vgo/go-ego/ego"
+	"github.com/go-ego/ego"
 )
 
 // const httpUrl string = "http://127.0.0.1:3000"
