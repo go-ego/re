@@ -70,7 +70,12 @@ func createDir(cmd *Command, args []string) int {
 			apppath = strings.Replace(apppath, "/", "\\", -1)
 		}
 		tfile := strings.Replace(afilesrc[i], githubsrc, "", -1)
-		name := apppath + "/" + tfile
+		var name string
+		if runtime.GOOS == "windows" {
+			name = apppath + "\\" + tfile
+		} else {
+			name = apppath + "/" + tfile
+		}
 		CopyFile(afilesrc[i], name)
 	}
 
