@@ -36,8 +36,8 @@ import (
 var cmdPack = &Command{
 	CustomFlags: true,
 	UsageLine:   "pack",
-	Short:       "Compresses a Beego application into a single file",
-	Long: `Pack is used to compress Beego applications into a tarball/zip file.
+	Short:       "Compresses a Ego application into a single file",
+	Long: `Pack is used to compress Ego applications into a tarball/zip file.
   This eases the deployment by directly extracting the file to a server.
 
   {{"Example:"|bold}}

@@ -21,9 +21,9 @@ import (
 
 var cmdVersion = &Command{
 	UsageLine: "version",
-	Short:     "Prints the current Bee version",
+	Short:     "Prints the current E version",
 	Long: `
-Prints the current Bee, Beego and Go version alongside the platform information.
+Prints the current E, Ego and Go version alongside the platform information.
 
 `,
 	Run: versionCmd,

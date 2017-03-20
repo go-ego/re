@@ -10,7 +10,7 @@
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <!--<a href="https://github.com/go-ego/ego/releases"><img src="https://img.shields.io/badge/%20version%20-%206.0.0%20-blue.svg?style=flat-square" alt="Releases"></a>-->
   
-  >E is a is a tool for helping develop with ego app framework. Thanks [bee](https://github.com/beego/bee) for providing power.
+  >E is a tool for helping develop with ego app framework. Thanks [bee](https://github.com/beego/bee) for providing power.
 
 This is a work in progress.
 
@@ -19,6 +19,7 @@ This is a work in progress.
 ## Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Plans](#plans)
 - [Donate](#donate)
 - [Contributing](#contributing)
@@ -31,6 +32,26 @@ This is a work in progress.
 ## Installation:
 ```
 go get -u github.com/go-ego/e 
+```
+## Usage
+
+```sh
+
+USAGE
+    ego command [arguments]
+
+AVAILABLE COMMANDS
+
+    new         auto-generate code for the ego app, Creates a ego API application
+    run         Run the application by starting a local development server
+    pack        Compresses a Ego application into a single file
+    bale        Transforms non-Go files to Go source files
+    version     Prints the current E version
+    migrate     Runs database migrations
+    fix         fix the ego application to make it compatible with ego 1.0
+
+Use ego help [command] for more information about a command.
+
 ```
 
 ## Plans
