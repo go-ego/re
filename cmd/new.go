@@ -16,6 +16,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"runtime"
 	"strings"
 
 	"github.com/go-ego/e/log"
@@ -33,6 +34,9 @@ func createDir(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	fmt.Println(gopath)
 	githubsrc := gopath[0] + "/src/github.com/go-ego/e/gen/"
+	if runtime.GOOS == "windows" {
+		githubsrc = strings.Replace(githubsrc, "/", "\\", -1)
+	}
 	// fmt.Println("githubsrc--------", githubsrc)
 
 	afile, err := WalkFile(githubsrc, "")
@@ -97,7 +101,7 @@ func fileExist(filename string) bool {
 
 func Wirtefile(wirtestr string, userFile string) {
 
-	fmt.Println(log.Blue("create:::"), log.Yellow(userFile))
+	fmt.Println(log.Blue("Create:::"), log.Yellow(userFile))
 
 	os.MkdirAll(path.Dir(userFile), os.ModePerm)
 
