@@ -1,4 +1,4 @@
-# Ego
+# E
 <!--<img align="right" src="https://raw.githubusercontent.com/go-ego/ego/master/logo.jpg">-->
 <!--[![Build Status](https://travis-ci.org/go-ego/ego.svg)](https://travis-ci.org/go-ego/ego)
 [![codecov](https://codecov.io/gh/go-ego/ego/branch/master/graph/badge.svg)](https://codecov.io/gh/go-ego/ego)-->
@@ -54,8 +54,24 @@ Use ego help [command] for more information about a command.
 
 ```
 
+### e new 
+
+To create a new Ego web application
+
+### e run
+
+To run the application we just created, you can navigate to the application folder and execute:
+```
+$ cd my-webapp && e run
+```
+Or from anywhere in your machine:
+```
+$ e run github.com/user/my-webapp
+```
+For more information on the usage, run bee help run.
+
 ## Plans
-- 
+- generate code and docs
 
 ## Donate
 - Supporting ego, [buy me a coffee](https://github.com/go-vgo/buy-me-a-coffee).
@@ -67,6 +83,6 @@ Use ego help [command] for more information about a command.
 
 ## License
 
-Ego is primarily distributed under the terms of both the MIT license and the Apache License (Version 2.0).
+E is primarily distributed under the terms of both the MIT license and the Apache License (Version 2.0).
 
 See [LICENSE-APACHE](http://www.apache.org/licenses/LICENSE-2.0), [LICENSE-MIT](https://github.com/go-ego/ego/blob/master/LICENSE), and COPYRIGHT for details.
