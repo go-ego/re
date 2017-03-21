@@ -88,6 +88,19 @@ func CopyFile(src, dst string) (w int64, err error) {
 		return
 	}
 	defer srcFile.Close()
+
+	var redst string
+	if runtime.GOOS == "windows" {
+		if strings.Contains(dst, ".") {
+			dstarr := strings.Split(dst, "\\")
+			len := len(dstarr) - 1
+			datstr := dstarr[len]
+			redst = strings.Replace(dst, datstr, "", -1)
+		} else {
+			redst = dst
+		}
+		os.MkdirAll(redst, os.ModePerm)
+	}
 	// if fileExist(dst) != true {
 	if !fileExist(dst) {
 		Wirtefile("", dst)
