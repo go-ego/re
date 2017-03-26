@@ -68,10 +68,12 @@ Or from anywhere in your machine:
 ```
 $ e run github.com/user/my-webapp
 ```
-For more information on the usage, run bee help run.
+For more information on the usage, run e help run.
 
 ## Plans
 - generate code and docs
+- generating a dockerfile
+- help with debugging your application
 
 ## Donate
 - Supporting ego, [buy me a coffee](https://github.com/go-vgo/buy-me-a-coffee).
