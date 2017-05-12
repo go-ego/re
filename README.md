@@ -6,7 +6,7 @@
 [![CircleCI Status](https://circleci.com/gh/go-ego/re.svg?style=shield)](https://circleci.com/gh/go-ego/re)
 [![Go Report Card](https://goreportcard.com/badge/github.com/go-ego/re)](https://goreportcard.com/report/github.com/go-ego/re)
 [![GoDoc](https://godoc.org/github.com/go-ego/re?status.svg)](https://godoc.org/github.com/go-ego/re)
-[![Release](https://github-release-version.herokuapp.com/github/go-ego/re/release.svg?style=flat)](https://github.com/go-ego/e/releases/latest)
+[![Release](https://github-release-version.herokuapp.com/github/go-ego/re/release.svg?style=flat)](https://github.com/go-ego/re/releases/latest)
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <!--<a href="https://github.com/go-ego/ego/releases"><img src="https://img.shields.io/badge/%20version%20-%206.0.0%20-blue.svg?style=flat-square" alt="Releases"></a>-->
   
@@ -80,9 +80,9 @@ For more information on the usage, run re help run.
 - Supporting ego, [buy me a coffee](https://github.com/go-vgo/buy-me-a-coffee).
 ## Contributing
 
-- To contribute to re, please see [Contribution Guidelines](https://github.com/go-ego/e/blob/master/CONTRIBUTING.md).
+- To contribute to re, please see [Contribution Guidelines](https://github.com/go-ego/re/blob/master/CONTRIBUTING.md).
 
-- See [contributors page](https://github.com/go-ego/e/graphs/contributors) for full list of contributors.
+- See [contributors page](https://github.com/go-ego/re/graphs/contributors) for full list of contributors.
 
 ## License
 

@@ -78,9 +78,9 @@ For more information on the usage, run re help run.
 - Supporting ego, [buy me a coffee](https://github.com/go-vgo/buy-me-a-coffee).
 ## Contributing
 
-- To contribute to re, please see [Contribution Guidelines](https://github.com/go-ego/e/blob/master/CONTRIBUTING.md).
+- To contribute to re, please see [Contribution Guidelines](https://github.com/go-ego/re/blob/master/CONTRIBUTING.md).
 
-- See [contributors page](https://github.com/go-ego/e/graphs/contributors) for full list of contributors.
+- See [contributors page](https://github.com/go-ego/re/graphs/contributors) for full list of contributors.
 
 ## License
 

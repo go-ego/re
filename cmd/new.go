@@ -33,7 +33,7 @@ var cmdNew = &Command{
 func createDir(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	fmt.Println(gopath)
-	githubsrc := gopath[0] + "/src/github.com/go-ego/e/gen/"
+	githubsrc := gopath[0] + "/src/github.com/go-ego/re/gen/"
 	if runtime.GOOS == "windows" {
 		githubsrc = strings.Replace(githubsrc, "/", "\\", -1)
 	}

@@ -22,7 +22,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-ego/e/cmd"
+	"github.com/go-ego/re/cmd"
 )
 
 const (
