@@ -14,7 +14,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/go-ego/e/log"
+	"github.com/go-ego/re/log"
 
 	"gopkg.in/yaml.v2"
 )

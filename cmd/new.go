@@ -19,7 +19,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/go-ego/e/log"
+	"github.com/go-ego/re/log"
 )
 
 var cmdNew = &Command{

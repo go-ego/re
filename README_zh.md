@@ -29,7 +29,7 @@
 
 ## Installation:
 ```
-go get -u github.com/go-ego/e 
+go get -u github.com/go-ego/re 
 ```
 ## Usage
 
@@ -40,7 +40,8 @@ USAGE
 
 AVAILABLE COMMANDS
 
-    new         auto-generate code for the ego app, Creates a ego API application
+    new         auto-generate code for the ego app, Creates a ego application
+    api         Creates a ego API application
     run         Run the application by starting a local development server
     pack        Compresses a Ego application into a single file
     bale        Transforms non-Go files to Go source files

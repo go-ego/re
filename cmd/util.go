@@ -28,7 +28,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/go-ego/e/log"
+	"github.com/go-ego/re/log"
 )
 
 // Go is a basic promise implementation: it wraps calls a function in a goroutine

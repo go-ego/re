@@ -18,7 +18,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/go-ego/e/log"
+	"github.com/go-ego/re/log"
 )
 
 const (

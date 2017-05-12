@@ -27,7 +27,7 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/go-ego/e/log"
+	"github.com/go-ego/re/log"
 )
 
 var (
