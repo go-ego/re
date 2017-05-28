@@ -31,6 +31,11 @@
 ```
 go get -u github.com/go-ego/re 
 ```
+Then you can add re binary to PATH environment variable in your ~/.bashrc or ~/.bash_profile file:
+
+```
+export PATH=$PATH:<your_main_gopath>/bin
+````
 ## Usage
 
 ```sh
