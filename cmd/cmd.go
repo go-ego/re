@@ -22,7 +22,7 @@ import (
 )
 
 const (
-	version string = "v0.10.0.1, First!"
+	version string = "v0.10.0.36, Nile River!"
 )
 
 // Command is the unit of execution
