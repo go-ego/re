@@ -3,7 +3,8 @@
 <!--[![Build Status](https://travis-ci.org/go-ego/ego.svg)](https://travis-ci.org/go-ego/ego)
 [![codecov](https://codecov.io/gh/go-ego/ego/branch/master/graph/badge.svg)](https://codecov.io/gh/go-ego/ego)-->
 <!--<a href="https://circleci.com/gh/go-ego/ego/tree/dev"><img src="https://img.shields.io/circleci/project/go-ego/ego/dev.svg" alt="Build Status"></a>-->
-[![CircleCI Status](https://circleci.com/gh/go-ego/re.svg?style=shield)](https://circleci.com/gh/go-ego/re)
+<!--[![CircleCI Status](https://circleci.com/gh/go-ego/re.svg?style=shield)](https://circleci.com/gh/go-ego/re)-->
+[![Build Status](https://travis-ci.org/go-ego/re.svg)](https://travis-ci.org/go-ego/re)
 [![Go Report Card](https://goreportcard.com/badge/github.com/go-ego/re)](https://goreportcard.com/report/github.com/go-ego/re)
 [![GoDoc](https://godoc.org/github.com/go-ego/re?status.svg)](https://godoc.org/github.com/go-ego/re)
 [![Release](https://github-release-version.herokuapp.com/github/go-ego/re/release.svg?style=flat)](https://github.com/go-ego/re/releases/latest)
