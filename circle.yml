@@ -20,8 +20,8 @@ machine:
 dependencies:
   override:
     # './...' is a relative pattern which means all subdirectories
+    - go get -u github.com/go-ego/ego
     - go get -t -d -v ./...
-    - go get -v github.com/go-ego/ego
 
 # script:
 #   - ./go.test.sh
