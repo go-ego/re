@@ -5,7 +5,10 @@ go:
   - 1.8.x
   - tip
 
-install: go get -v -t
+install:
+  - export PATH=$PATH:$HOME/gopath/bin
+  - go get -u github.com/go-ego/ego
+  - go get -v -t
 
 # notifications:
 #   email:
