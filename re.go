@@ -26,7 +26,7 @@ import (
 )
 
 const (
-	version string = "v0.10.0.1, First!"
+	version string = "v0.10.0.41, Nile River!"
 )
 
 //GetVersion get version

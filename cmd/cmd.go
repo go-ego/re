@@ -22,7 +22,7 @@ import (
 )
 
 const (
-	version string = "v0.10.0.36, Nile River!"
+	version string = "v0.10.0.41, Nile River!"
 )
 
 // Command is the unit of execution
@@ -141,26 +141,26 @@ func IsGenerateDocs(name string, args []string) bool {
 	return false
 }
 
-var usageTemplate = `ego is a Fast and Flexible tool for managing your ego Web Application.
+var usageTemplate = `re is a Fast and Flexible tool for managing your ego Web Application.
 
 {{"USAGE" | headline}}
-    {{"ego command [arguments]" | bold}}
+    {{"re command [arguments]" | bold}}
 
 {{"AVAILABLE COMMANDS" | headline}}
 {{range .}}{{if .Runnable}}
     {{.Name | printf "%-11s" | bold}} {{.Short}}{{end}}{{end}}
 
-Use {{"ego help [command]" | bold}} for more information about a command.
+Use {{"re help [command]" | bold}} for more information about a command.
 
 {{"ADDITIONAL HELP TOPICS" | headline}}
 {{range .}}{{if not .Runnable}}
     {{.Name | printf "%-11s"}} {{.Short}}{{end}}{{end}}
 
-Use {{"ego help [topic]" | bold}} for more information about that topic.
+Use {{"re help [topic]" | bold}} for more information about that topic.
 `
 
 var helpTemplate = `{{"USAGE" | headline}}
-  {{.UsageLine | printf "ego %s" | bold}}
+  {{.UsageLine | printf "re %s" | bold}}
 {{if .Options}}{{endline}}{{"OPTIONS" | headline}}{{range $k,$v := .Options}}
   {{$k | printf "-%s" | bold}}
       {{$v}}
@@ -169,11 +169,11 @@ var helpTemplate = `{{"USAGE" | headline}}
   {{tmpltostr .Long . | trim}}
 `
 
-var errorTemplate = `ego: %s.
-Use {{"ego help" | bold}} for more information.
+var errorTemplate = `re: %s.
+Use {{"re help" | bold}} for more information.
 `
 
-var cmdUsage = `Use {{printf "ego help %s" .Name | bold}} for more information.{{endline}}`
+var cmdUsage = `Use {{printf "re help %s" .Name | bold}} for more information.{{endline}}`
 
 func Usage() {
 	tmpl(usageTemplate, AvailableCommands)
