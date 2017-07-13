@@ -22,18 +22,18 @@ import (
 	"github.com/go-ego/re/log"
 )
 
-var cmdGwk = &Command{
-	UsageLine: "gwk [appname]",
-	Short:     "auto-generate code for the gwk application",
+var cmdRiot = &Command{
+	UsageLine: "riot [appname]",
+	Short:     "auto-generate code for the riot application",
 	Long: `
 
-`, Run: createGwk,
+`, Run: createRiot,
 }
 
-func createGwk(cmd *Command, args []string) int {
+func createRiot(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	fmt.Println(gopath)
-	githubsrc := gopath[0] + "/src/github.com/go-ego/re/gwk/"
+	githubsrc := gopath[0] + "/src/github.com/go-ego/re/riot/"
 	if runtime.GOOS == "windows" {
 		githubsrc = strings.Replace(githubsrc, "/", "\\", -1)
 	}
