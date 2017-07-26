@@ -15,7 +15,7 @@ var (
 func main() {
 	// Init
 	searcher.Init(types.EngineInitOptions{
-		SegmenterDictionaries: "./data/dictionary.txt"})
+		SegmenterDict: "./data/dictionary.txt"})
 	defer searcher.Close()
 
 	// Add the document to the index, docId starts at 1
