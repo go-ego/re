@@ -11,7 +11,7 @@
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <!--<a href="https://github.com/go-ego/ego/releases"><img src="https://img.shields.io/badge/%20version%20-%206.0.0%20-blue.svg?style=flat-square" alt="Releases"></a>-->
   
-  >Re 是协助 ego 框架进行开发的命令行工具. Thanks [bee](https://github.com/beego/bee) for providing power.
+  >Re 是协助 ego 框架进行开发的命令行工具, base on [bee](https://github.com/beego/bee).
 
 这是一项正在完善的工作.
 
