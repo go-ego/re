@@ -8,13 +8,13 @@ go:
 install:
   - export PATH=$PATH:$HOME/gopath/bin
   - go get -u github.com/go-ego/ego
-  - go get -u github.com/go-ego/riot
-  - go get -u github.com/go-ego/gse  
-  - go get -u github.com/go-ego/gpy 
-  - go get -u github.com/go-ego/murmur 
-  - go get -u golang.org/x/sys/unix
-  - go get -u github.com/shirou/gopsutil
-  - go get -v -t
+  # - go get -u github.com/go-ego/riot
+  # - go get -u github.com/go-ego/gse  
+  # - go get -u github.com/go-ego/gpy 
+  # - go get -u github.com/go-ego/murmur 
+  # - go get -u golang.org/x/sys/unix
+  # - go get -u github.com/shirou/gopsutil
+  - go get -v -t  ./...
 
 # notifications:
 #   email:
