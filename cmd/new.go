@@ -103,7 +103,7 @@ func CopyFile(src, dst string) (w int64, err error) {
 	}
 	// if fileExist(dst) != true {
 	if !fileExist(dst) {
-		Wirtefile("", dst)
+		Writefile("", dst)
 	}
 	dstFile, err := os.Create(dst)
 	if err != nil {
@@ -119,7 +119,7 @@ func fileExist(filename string) bool {
 	return err == nil || os.IsExist(err)
 }
 
-func Wirtefile(wirtestr string, userFile string) {
+func Writefile(writeStr string, userFile string) {
 
 	fmt.Println(log.Blue("Create:::"), log.Yellow(userFile))
 
@@ -132,7 +132,7 @@ func Wirtefile(wirtestr string, userFile string) {
 		return
 	}
 
-	fout.WriteString(wirtestr)
+	fout.WriteString(writeStr)
 
 }
 
