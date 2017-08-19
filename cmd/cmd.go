@@ -117,6 +117,7 @@ var AvailableCommands = []*Command{
 	cmdPack,
 	cmdApi,
 	cmdRiot,
+	cmdGse,
 	//cmdRouter,
 	//cmdTest,
 	cmdBale,
