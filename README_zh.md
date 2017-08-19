@@ -48,7 +48,8 @@ AVAILABLE COMMANDS
 
     new         auto-generate code for the ego app, Creates a ego application
     api         Creates a ego API application
-    riot         Creates a riot application
+    riot        Creates a riot application
+    gse         Creates a gse application
     run         Run the application by starting a local development server
     pack        Compresses a Ego application into a single file
     bale        Transforms non-Go files to Go source files

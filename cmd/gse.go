@@ -21,7 +21,7 @@ import (
 
 var cmdGse = &Command{
 	UsageLine: "gse [appname]",
-	Short:     "auto-generate code for the riot application",
+	Short:     "auto-generate code for the gse application",
 	Long: `
 
 `, Run: createGse,
