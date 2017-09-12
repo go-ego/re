@@ -1,18 +1,12 @@
 {
-    "comment": "",
+    "comment": "v0.10.0",
     "ignore": "test",
     "package": [{
-            "checksumSHA1": "hveFTNQ9YEyYRs6SWuXM+XU9qRI=",
+            "checksumSHA1": "x2Km0Qy3WgJJnV19Zv25VwTJcBM=",
             "path": "github.com/fsnotify/fsnotify",
-            "revision": "fd9ec7deca8bf46ecd2a795baaacf2b3a9be1197",
-            "revisionTime": "2016-10-26T20:31:22Z"
+            "revision": "4da3e2cfbabc9f751898f250b49f2439785783a1",
+            "revisionTime": "2017-03-29T04:21:07Z"
         },
-        // {
-        //     "checksumSHA1": "G778A9feKkdW7ZjeDdj5qoU0Ku4=",
-        //     "path": "github.com/gorilla/websocket",
-        //     "revision": "b258b4fadb573ac412f187b9f31974ea99d32f50",
-        //     "revisionTime": "2017-03-02T22:46:13Z"
-        // },
         {
             "checksumSHA1": "59kg2xC3rBxV0/5SIv+LA4qva08=",
             "path": "github.com/go-sql-driver/mysql",
@@ -44,5 +38,5 @@
             "revisionTime": "2016-03-01T20:40:22Z"
         }
     ],
-    "rootPath": "github.com/go-ego/e"
+    "rootPath": "github.com/go-ego/re"
 }
