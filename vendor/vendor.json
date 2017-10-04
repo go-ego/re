@@ -8,16 +8,16 @@
             "revisionTime": "2017-03-29T04:21:07Z"
         },
         {
-            "checksumSHA1": "59kg2xC3rBxV0/5SIv+LA4qva08=",
+            "checksumSHA1": "kgmVhTOXEm2z7oAoD0bSX2HpGgo=",
             "path": "github.com/go-sql-driver/mysql",
-            "revision": "6fd058ce0d6b7ee43174e80d5a3e7f483c4dfbe5",
-            "revisionTime": "2016-01-13T11:48:05Z"
+            "revision": "a8b7ed4454a6a4f98f85d3ad558cd6d97cec6959",
+            "revisionTime": "2017-10-03T16:05:15Z"
         },
         {
-            "checksumSHA1": "dNYxHiBLalTqluak2/Z8c3RsSEM=",
+            "checksumSHA1": "/mlelB9eP/TxbND7uBtxVrLF1Ik=",
             "path": "github.com/lib/pq",
-            "revision": "80f8150043c80fb52dee6bc863a709cdac7ec8f8",
-            "revisionTime": "2016-08-06T14:40:29Z"
+            "revision": "b77235e3890a962fe8a6f8c4c7198679ca7814e7",
+            "revisionTime": "2017-09-22T17:26:34Z"
         },
         {
             "checksumSHA1": "xppHi82MLqVx1eyQmbhTesAEjx8=",
