@@ -1,42 +1,43 @@
 {
-    "comment": "v0.10.0",
-    "ignore": "test",
-    "package": [{
-            "checksumSHA1": "x2Km0Qy3WgJJnV19Zv25VwTJcBM=",
-            "path": "github.com/fsnotify/fsnotify",
-            "revision": "4da3e2cfbabc9f751898f250b49f2439785783a1",
-            "revisionTime": "2017-03-29T04:21:07Z"
-        },
-        {
-            "checksumSHA1": "kgmVhTOXEm2z7oAoD0bSX2HpGgo=",
-            "path": "github.com/go-sql-driver/mysql",
-            "revision": "a8b7ed4454a6a4f98f85d3ad558cd6d97cec6959",
-            "revisionTime": "2017-10-03T16:05:15Z"
-        },
-        {
-            "checksumSHA1": "/mlelB9eP/TxbND7uBtxVrLF1Ik=",
-            "path": "github.com/lib/pq",
-            "revision": "b77235e3890a962fe8a6f8c4c7198679ca7814e7",
-            "revisionTime": "2017-09-22T17:26:34Z"
-        },
-        {
-            "checksumSHA1": "xppHi82MLqVx1eyQmbhTesAEjx8=",
-            "path": "github.com/lib/pq/oid",
-            "revision": "80f8150043c80fb52dee6bc863a709cdac7ec8f8",
-            "revisionTime": "2016-08-06T14:40:29Z"
-        },
-        {
-            "checksumSHA1": "NIg5qnKx/D8Th7YX882++siXTDY=",
-            "path": "golang.org/x/sys/unix",
-            "revision": "131454b5606f5f11f6926156504d8ec772484f1d",
-            "revisionTime": "2015-09-10T19:29:23Z"
-        },
-        {
-            "checksumSHA1": "+OgOXBoiQ+X+C2dsAeiOHwBIEH0=",
-            "path": "gopkg.in/yaml.v2",
-            "revision": "a83829b6f1293c91addabc89d0571c246397bbf4",
-            "revisionTime": "2016-03-01T20:40:22Z"
-        }
-    ],
-    "rootPath": "github.com/go-ego/re"
+	"comment": "v0.10.0",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "x2Km0Qy3WgJJnV19Zv25VwTJcBM=",
+			"path": "github.com/fsnotify/fsnotify",
+			"revision": "4da3e2cfbabc9f751898f250b49f2439785783a1",
+			"revisionTime": "2017-03-29T04:21:07Z"
+		},
+		{
+			"checksumSHA1": "kgmVhTOXEm2z7oAoD0bSX2HpGgo=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "a8b7ed4454a6a4f98f85d3ad558cd6d97cec6959",
+			"revisionTime": "2017-10-03T16:05:15Z"
+		},
+		{
+			"checksumSHA1": "+hQAF7/X0rDg/sXFbUkoUHfLsx8=",
+			"path": "github.com/lib/pq",
+			"revision": "017e4c14d80628353eaee677a1aeffe47a10c0dc",
+			"revisionTime": "2017-10-11T13:52:33Z"
+		},
+		{
+			"checksumSHA1": "xppHi82MLqVx1eyQmbhTesAEjx8=",
+			"path": "github.com/lib/pq/oid",
+			"revision": "80f8150043c80fb52dee6bc863a709cdac7ec8f8",
+			"revisionTime": "2016-08-06T14:40:29Z"
+		},
+		{
+			"checksumSHA1": "NIg5qnKx/D8Th7YX882++siXTDY=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "131454b5606f5f11f6926156504d8ec772484f1d",
+			"revisionTime": "2015-09-10T19:29:23Z"
+		},
+		{
+			"checksumSHA1": "+OgOXBoiQ+X+C2dsAeiOHwBIEH0=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "a83829b6f1293c91addabc89d0571c246397bbf4",
+			"revisionTime": "2016-03-01T20:40:22Z"
+		}
+	],
+	"rootPath": "github.com/go-ego/re"
 }
