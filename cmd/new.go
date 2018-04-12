@@ -13,13 +13,14 @@ package cmd
 import (
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"path"
 	"path/filepath"
 	"runtime"
 	"strings"
 
-	"github.com/go-ego/re/log"
+	rlog "github.com/go-ego/re/log"
 )
 
 var cmdNew = &Command{
@@ -32,54 +33,61 @@ var cmdNew = &Command{
 
 func createDir(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
-	fmt.Println(gopath)
+	log.Println("gopath: ", gopath)
+
 	githubsrc := gopath[0] + "/src/github.com/go-ego/re/gen/"
+	newDir(githubsrc, args)
+
+	return 0
+}
+
+func newDir(githubsrc string, args []string) {
 	if runtime.GOOS == "windows" {
 		githubsrc = strings.Replace(githubsrc, "/", "\\", -1)
 	}
 	// fmt.Println("githubsrc--------", githubsrc)
 
-	afilesrc, err := WalkFile(githubsrc, "")
+	filesrc, err := WalkFile(githubsrc, "")
 	if err != nil {
-		fmt.Println(err)
+		log.Println("walk flie: ", err)
 	}
-	// fmt.Println(afilesrc)
+	// log.Println(filesrc)
 
 	if len(args) != 1 {
 		logger.Fatal("Argument [appname] is missing")
 	}
 
-	apppath, packpath, err := checkEnv(args[0])
+	appPath, packPath, err := checkEnv(args[0])
 	if err != nil {
 		logger.Fatalf("%s", err)
 	}
 
-	if isExist(apppath) {
-		logger.Errorf(log.Bold("Application '%s' already exists"), apppath)
-		logger.Warn(log.Bold("Do you want to overwrite it? [Yes|No] "))
+	if isExist(appPath) {
+		logger.Errorf(rlog.Bold("Application '%s' already exists"), appPath)
+		logger.Warn(rlog.Bold("Do you want to overwrite it? [Yes|No] "))
 		if !askForConfirmation() {
 			os.Exit(2)
 		}
 	}
 
-	logger.Info("Creating application... " + packpath)
+	logger.Info("Creating application... " + packPath)
 
-	for i := 0; i < len(afilesrc); i++ {
+	for i := 0; i < len(filesrc); i++ {
 		if runtime.GOOS == "windows" {
-			afilesrc[i] = strings.Replace(afilesrc[i], "/", "\\", -1)
-			apppath = strings.Replace(apppath, "/", "\\", -1)
+			filesrc[i] = strings.Replace(filesrc[i], "/", "\\", -1)
+			appPath = strings.Replace(appPath, "/", "\\", -1)
 		}
-		tfile := strings.Replace(afilesrc[i], githubsrc, "", -1)
+		tfile := strings.Replace(filesrc[i], githubsrc, "", -1)
 		var name string
 		if runtime.GOOS == "windows" {
-			name = apppath + "\\" + tfile
+			name = appPath + "\\" + tfile
 		} else {
-			name = apppath + "/" + tfile
+			name = appPath + "/" + tfile
 		}
-		CopyFile(afilesrc[i], name)
+
+		CopyFile(filesrc[i], name)
 	}
 
-	return 0
 }
 
 func CopyFile(src, dst string) (w int64, err error) {
@@ -121,7 +129,7 @@ func fileExist(filename string) bool {
 
 func Writefile(writeStr string, userFile string) {
 
-	fmt.Println(log.Blue("Create:::"), log.Yellow(userFile))
+	log.Println(rlog.Blue("Create:::"), rlog.Yellow(userFile))
 
 	os.MkdirAll(path.Dir(userFile), os.ModePerm)
 
@@ -150,5 +158,6 @@ func WalkFile(dirPth, suffix string) (files []string, err error) {
 		}
 		return nil
 	})
+
 	return files, err
 }
