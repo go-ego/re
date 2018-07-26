@@ -26,7 +26,8 @@ func createGse(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	log.Println("gopath: ", gopath)
 
-	githubsrc := gopath[0] + "/src/github.com/go-ego/gse/data"
+	// githubsrc := gopath[0] + "/src/github.com/go-ego/gse/data"
+	githubsrc := hasFile(gopath, "/src/github.com/go-ego/gse/data")
 	newDir(githubsrc, args)
 
 	return 0

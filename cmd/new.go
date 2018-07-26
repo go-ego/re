@@ -16,11 +16,11 @@ import (
 	"log"
 	"os"
 	"path"
-	"path/filepath"
 	"runtime"
 	"strings"
 
 	rlog "github.com/go-ego/re/log"
+	"github.com/go-vgo/gt/file"
 )
 
 var cmdNew = &Command{
@@ -35,10 +35,22 @@ func createDir(cmd *Command, args []string) int {
 	gopath := GetGOPATHs()
 	log.Println("gopath: ", gopath)
 
-	githubsrc := gopath[0] + "/src/github.com/go-ego/re/gen/"
+	// githubsrc := gopath[0] + "/src/github.com/go-ego/re/gen/"
+	githubsrc := hasFile(gopath, "/src/github.com/go-ego/re/gen/")
 	newDir(githubsrc, args)
 
 	return 0
+}
+
+func hasFile(gopath []string, name string) string {
+	for i := 0; i < len(gopath); i++ {
+		filename := gopath[i] + name
+		if file.Exist(filename) {
+			return filename
+		}
+	}
+
+	return ""
 }
 
 func newDir(githubsrc string, args []string) {
@@ -47,7 +59,7 @@ func newDir(githubsrc string, args []string) {
 	}
 	// fmt.Println("githubsrc--------", githubsrc)
 
-	filesrc, err := WalkFile(githubsrc, "")
+	filesrc, err := file.Walk(githubsrc, "")
 	if err != nil {
 		log.Println("walk flie: ", err)
 	}
@@ -77,6 +89,7 @@ func newDir(githubsrc string, args []string) {
 			filesrc[i] = strings.Replace(filesrc[i], "/", "\\", -1)
 			appPath = strings.Replace(appPath, "/", "\\", -1)
 		}
+
 		tfile := strings.Replace(filesrc[i], githubsrc, "", -1)
 		var name string
 		if runtime.GOOS == "windows" {
@@ -87,7 +100,6 @@ func newDir(githubsrc string, args []string) {
 
 		CopyFile(filesrc[i], name)
 	}
-
 }
 
 func CopyFile(src, dst string) (w int64, err error) {
@@ -109,9 +121,9 @@ func CopyFile(src, dst string) (w int64, err error) {
 		}
 		os.MkdirAll(redst, os.ModePerm)
 	}
-	// if fileExist(dst) != true {
-	if !fileExist(dst) {
-		Writefile("", dst)
+	// if file.Exist(dst) != true {
+	if !file.Exist(dst) {
+		Writefile(dst, "")
 	}
 	dstFile, err := os.Create(dst)
 	if err != nil {
@@ -122,42 +134,16 @@ func CopyFile(src, dst string) (w int64, err error) {
 	return io.Copy(dstFile, srcFile)
 }
 
-func fileExist(filename string) bool {
-	_, err := os.Stat(filename)
-	return err == nil || os.IsExist(err)
-}
+func Writefile(fileName, writeStr string) {
+	log.Println(rlog.Blue("Create:::"), rlog.Yellow(fileName))
+	os.MkdirAll(path.Dir(fileName), os.ModePerm)
 
-func Writefile(writeStr string, userFile string) {
-
-	log.Println(rlog.Blue("Create:::"), rlog.Yellow(userFile))
-
-	os.MkdirAll(path.Dir(userFile), os.ModePerm)
-
-	fout, err := os.Create(userFile)
-	defer fout.Close()
+	fout, err := os.Create(fileName)
 	if err != nil {
-		fmt.Println(userFile, err)
+		fmt.Println(fileName, err)
 		return
 	}
+	defer fout.Close()
 
 	fout.WriteString(writeStr)
-
-}
-
-func WalkFile(dirPth, suffix string) (files []string, err error) {
-	files = make([]string, 0, 30)
-	suffix = strings.ToUpper(suffix)
-	err = filepath.Walk(dirPth, func(filename string, fi os.FileInfo, err error) error {
-
-		if fi.IsDir() { // dir
-			return nil
-		}
-
-		if strings.HasSuffix(strings.ToUpper(fi.Name()), suffix) {
-			files = append(files, filename)
-		}
-		return nil
-	})
-
-	return files, err
 }
