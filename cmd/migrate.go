@@ -403,7 +403,7 @@ CREATE TABLE migrations (
 	name varchar(255) DEFAULT NULL COMMENT 'migration name, unique',
 	created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'date migrated or rolled back',
 	statements longtext COMMENT 'SQL statements for this migration',
-	rollback_statements longtext COMMENT 'SQL statment for rolling back migration',
+	rollback_statements longtext COMMENT 'SQL statement for rolling back migration',
 	status ENUM('update', 'rollback') COMMENT 'update indicates it is a normal migration while rollback means this migration is rolled back',
 	PRIMARY KEY (id_migration)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8

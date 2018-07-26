@@ -110,7 +110,7 @@ func IsEgoProject(thePath string) bool {
 	return false
 }
 
-// SearchGOPATHs searchs the user GOPATH(s) for the specified application name.
+// SearchGOPATHs searches the user GOPATH(s) for the specified application name.
 // It returns a boolean, the application's GOPATH and its full path.
 func SearchGOPATHs(app string) (bool, string, string) {
 	gps := GetGOPATHs()
