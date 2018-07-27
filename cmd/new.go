@@ -100,10 +100,6 @@ func newDir(githubsrc string, args []string) {
 }
 
 func CopyFile(src, dst string) {
-	if !file.Exist(dst) {
-		Writefile(dst, "")
-	}
-
 	var redst string
 	if runtime.GOOS == "windows" {
 		if strings.Contains(dst, ".") {
@@ -115,6 +111,10 @@ func CopyFile(src, dst string) {
 			redst = dst
 		}
 		os.MkdirAll(redst, os.ModePerm)
+	}
+
+	if !file.Exist(dst) {
+		Writefile(dst, "")
 	}
 
 	file.CopyFile(src, dst)

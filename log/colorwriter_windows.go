@@ -329,8 +329,10 @@ func (cw *colorWriter) resetBuffer() (int, error) {
 }
 
 func (cw *colorWriter) flushTo(w io.Writer) (int, error) {
-	var n1, n2 int
-	var err error
+	var (
+		n1, n2 int
+		err    error
+	)
 
 	startBytes := cw.paramStartBuf.Bytes()
 	cw.paramStartBuf.Reset()
@@ -360,7 +362,7 @@ func isParameterChar(b byte) bool {
 }
 
 func (cw *colorWriter) Write(p []byte) (int, error) {
-	r, nw, first, last := 0, 0, 0, 0
+	var r, nw, first, last int
 	if cw.mode != DiscardNonColorEscSeq {
 		cw.state = outsideCsiCode
 		cw.resetBuffer()
