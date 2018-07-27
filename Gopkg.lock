@@ -11,7 +11,7 @@
   branch = "master"
   name = "github.com/go-vgo/gt"
   packages = ["file"]
-  revision = "6004ff08e4ef57e4ffcfb8c40c7947c332bff0ff"
+  revision = "765190081bade7de90c53a7117f1c6a3dee5b0de"
 
 [[projects]]
   branch = "master"

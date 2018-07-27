@@ -11,11 +11,8 @@
 package cmd
 
 import (
-	"fmt"
-	"io"
 	"log"
 	"os"
-	"path"
 	"runtime"
 	"strings"
 
@@ -102,12 +99,10 @@ func newDir(githubsrc string, args []string) {
 	}
 }
 
-func CopyFile(src, dst string) (w int64, err error) {
-	srcFile, err := os.Open(src)
-	if err != nil {
-		return
+func CopyFile(src, dst string) {
+	if !file.Exist(dst) {
+		Writefile(dst, "")
 	}
-	defer srcFile.Close()
 
 	var redst string
 	if runtime.GOOS == "windows" {
@@ -121,29 +116,11 @@ func CopyFile(src, dst string) (w int64, err error) {
 		}
 		os.MkdirAll(redst, os.ModePerm)
 	}
-	// if file.Exist(dst) != true {
-	if !file.Exist(dst) {
-		Writefile(dst, "")
-	}
-	dstFile, err := os.Create(dst)
-	if err != nil {
-		fmt.Println(err.Error())
-		return
-	}
-	defer dstFile.Close()
-	return io.Copy(dstFile, srcFile)
+
+	file.CopyFile(src, dst)
 }
 
 func Writefile(fileName, writeStr string) {
 	log.Println(rlog.Blue("Create:::"), rlog.Yellow(fileName))
-	os.MkdirAll(path.Dir(fileName), os.ModePerm)
-
-	fout, err := os.Create(fileName)
-	if err != nil {
-		fmt.Println(fileName, err)
-		return
-	}
-	defer fout.Close()
-
-	fout.WriteString(writeStr)
+	file.Write(fileName, writeStr)
 }
