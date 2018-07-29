@@ -50,14 +50,23 @@ func isExist(path string) bool {
 // GetGOPATHs returns all paths in GOPATH variable.
 func GetGOPATHs() []string {
 	gopath := os.Getenv("GOPATH")
-	var paths []string
-	if runtime.GOOS == "windows" {
-		gopath = strings.Replace(gopath, "\\", "/", -1)
-		paths = strings.Split(gopath, ";")
-	} else {
-		paths = strings.Split(gopath, ":")
+	if gopath == "" && strings.Compare(runtime.Version(), "go1.8") >= 0 {
+		gopath = defaultGOPATH()
 	}
-	return paths
+	return filepath.SplitList(gopath)
+}
+
+func defaultGOPATH() string {
+	env := "HOME"
+	if runtime.GOOS == "windows" {
+		env = "USERPROFILE"
+	} else if runtime.GOOS == "plan9" {
+		env = "home"
+	}
+	if home := os.Getenv(env); home != "" {
+		return filepath.Join(home, "go")
+	}
+	return ""
 }
 
 // IsInGOPATH checks the path is in the fisrt GOPATH(/src) or not
